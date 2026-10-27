@@ -180,10 +180,10 @@ export function ResizableSidebar({
       <div
         id="main-sidebar"
         className={cn(
-          "z-20 h-full border-r border-subtle bg-surface-1",
+          "z-20 h-full max-h-full shrink-0 self-stretch border-r border-subtle bg-surface-1",
           !isResizing && "transition-all duration-300 ease-in-out",
           isCollapsed ? "w-0 translate-x-[-100%] opacity-0" : "translate-x-0 opacity-100",
-          isMobile && "absolute",
+          isMobile && "absolute inset-y-0",
           className
         )}
         style={{
@@ -194,10 +194,11 @@ export function ResizableSidebar({
         role="complementary"
         aria-label="Main sidebar"
         data-prevent-outside-click={isMobile}
+        data-astra-sidebar="true"
       >
         <aside
           className={cn(
-            "group/sidebar relative flex h-full w-full flex-col overflow-hidden bg-surface-1 pt-3",
+            "group/sidebar relative flex h-full max-h-full w-full flex-col overflow-hidden bg-surface-1 pt-3",
             isAnyExtendedSidebarExpanded && "rounded-none"
           )}
         >

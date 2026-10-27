@@ -27,7 +27,7 @@ export const THEME_OPTIONS: I_THEME_OPTION[] = [
     icon: {
       border: "#DEE2E6",
       color1: "#FAFAFA",
-      color2: "#3F76FF",
+      color2: "#1677FF",
     },
   },
   {
@@ -36,9 +36,9 @@ export const THEME_OPTIONS: I_THEME_OPTION[] = [
     i18n_label: "Light",
     type: "light",
     icon: {
-      border: "#DEE2E6",
-      color1: "#FAFAFA",
-      color2: "#3F76FF",
+      border: "#E3E8F0",
+      color1: "#F4F6FB",
+      color2: "#1677FF",
     },
   },
   {
@@ -47,9 +47,9 @@ export const THEME_OPTIONS: I_THEME_OPTION[] = [
     i18n_label: "Dark",
     type: "dark",
     icon: {
-      border: "#2E3234",
-      color1: "#191B1B",
-      color2: "#3C85D9",
+      border: "#1E2A42",
+      color1: "#0A1222",
+      color2: "#4D94FF",
     },
   },
   {
@@ -60,7 +60,7 @@ export const THEME_OPTIONS: I_THEME_OPTION[] = [
     icon: {
       border: "#000000",
       color1: "#FFFFFF",
-      color2: "#3F76FF",
+      color2: "#1677FF",
     },
   },
   {
@@ -71,7 +71,7 @@ export const THEME_OPTIONS: I_THEME_OPTION[] = [
     icon: {
       border: "#FFFFFF",
       color1: "#030303",
-      color2: "#3A8BE9",
+      color2: "#4D94FF",
     },
   },
   {

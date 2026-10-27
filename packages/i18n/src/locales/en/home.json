@@ -19,7 +19,7 @@
         "cta": "Configure this workspace"
       },
       "personalize_account": {
-        "title": "Make Plane yours.",
+        "title": "Make Astra Flow yours.",
         "description": "Choose your picture, colors, and more.",
         "cta": "Personalize now"
       },
@@ -53,7 +53,7 @@
       }
     },
     "new_at_plane": {
-      "title": "New at Plane"
+      "title": "New at Astra Flow"
     },
     "quick_tutorial": {
       "title": "Quick tutorial"

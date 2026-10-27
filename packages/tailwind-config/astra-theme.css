@@ -1,0 +1,155 @@
+/**
+ * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * SPDX-License-Identifier: AGPL-3.0-only
+ * See the LICENSE file for details.
+ *
+ * Astra Flow brand token overrides mapped onto Plane/propel semantic tokens.
+ * Keeps the existing data-theme switcher (light / dark / contrast / custom).
+ */
+
+@layer base {
+  :root,
+  :host {
+    /* Astra Blue + Teal (default "astra" theme) */
+    --astra-primary: #1677ff;
+    --astra-primary-dark: #4d94ff;
+    --astra-teal: #13b5a6;
+    --astra-sidebar-0: #0b1733;
+    --astra-sidebar-1: #091228;
+    --astra-sidebar-2: #08101f;
+
+    /* Remap brand scale to Astra primary #1677FF */
+    --brand-default: #1677ff;
+    --brand-50: color-mix(in srgb, #1677ff 6%, white);
+    --brand-100: color-mix(in srgb, #1677ff 10%, white);
+    --brand-200: color-mix(in srgb, #1677ff 18%, white);
+    --brand-300: color-mix(in srgb, #1677ff 28%, white);
+    --brand-400: color-mix(in srgb, #1677ff 42%, white);
+    --brand-500: color-mix(in srgb, #1677ff 58%, white);
+    --brand-600: color-mix(in srgb, #1677ff 75%, white);
+    --brand-700: #1677ff;
+    --brand-800: color-mix(in srgb, #1677ff 88%, black);
+    --brand-900: color-mix(in srgb, #1677ff 72%, black);
+    --brand-1000: color-mix(in srgb, #1677ff 58%, black);
+    --brand-1100: color-mix(in srgb, #1677ff 45%, black);
+    --brand-1200: color-mix(in srgb, #1677ff 32%, black);
+
+    /* Light base from astra-themes.md */
+    --neutral-white: #ffffff;
+    --neutral-100: #f7f9fc;
+    --neutral-200: #f4f6fb;
+    --neutral-300: #f4f6fb;
+    --neutral-400: #e3e8f0;
+    --neutral-500: #d5dde8;
+    --neutral-600: #c5cedb;
+    --neutral-700: #8a94a6;
+    --neutral-800: #8a94a6;
+    --neutral-900: #5b6478;
+    --neutral-1000: #5b6478;
+    --neutral-1100: color-mix(in srgb, #0b1324 72%, white);
+    --neutral-1200: #0b1324;
+    --neutral-black: #0b1324;
+
+    --bg-canvas: #f4f6fb;
+    --bg-surface-1: #ffffff;
+    --bg-surface-2: #f7f9fc;
+
+    --radius-xl: 1rem; /* 16px cards */
+    --radius-2xl: 1.25rem; /* 20px cards */
+    --control-radius-md: 9999px; /* pill buttons */
+    --control-radius-lg: 9999px;
+    --control-radius-xl: 9999px;
+    --control-radius-2xl: 9999px;
+
+    --font-body: "Inter", "Manrope", ui-sans-serif, system-ui, sans-serif;
+    --astra-sidebar-gradient: linear-gradient(180deg, #0b1733 0%, #091228 60%, #08101f 100%);
+  }
+
+  :root:where([data-theme*="dark"]),
+  :host:where([data-theme*="dark"]),
+  [data-theme*="dark"] {
+    --brand-default: #4d94ff;
+    --brand-50: #12305e;
+    --brand-100: color-mix(in srgb, #4d94ff 18%, #0a1222);
+    --brand-200: color-mix(in srgb, #4d94ff 26%, #0a1222);
+    --brand-300: color-mix(in srgb, #4d94ff 34%, #0a1222);
+    --brand-400: color-mix(in srgb, #4d94ff 45%, #0a1222);
+    --brand-500: color-mix(in srgb, #4d94ff 58%, #0a1222);
+    --brand-600: color-mix(in srgb, #4d94ff 72%, #0a1222);
+    --brand-700: #4d94ff;
+    --brand-800: color-mix(in srgb, #4d94ff 85%, white);
+    --brand-900: color-mix(in srgb, #4d94ff 70%, white);
+    --brand-1000: color-mix(in srgb, #4d94ff 55%, white);
+    --brand-1100: color-mix(in srgb, #4d94ff 40%, white);
+    --brand-1200: #e8edf5;
+
+    --neutral-black: #0a1222;
+    --neutral-100: #0f182b;
+    --neutral-200: #131e33;
+    --neutral-300: #131e33;
+    --neutral-400: #1e2a42;
+    --neutral-500: #2a3853;
+    --neutral-600: #2a3853;
+    --neutral-700: #6e7a91;
+    --neutral-800: #6e7a91;
+    --neutral-900: #9aa6bc;
+    --neutral-1000: #9aa6bc;
+    --neutral-1100: color-mix(in srgb, #e8edf5 78%, #0a1222);
+    --neutral-1200: #e8edf5;
+    --neutral-white: #e8edf5;
+
+    --bg-canvas: #0a1222;
+    --bg-surface-1: #0f182b;
+    --bg-surface-2: #131e33;
+  }
+
+  /* Navy sidebar in both modes (Astra spec) */
+  #main-sidebar,
+  #main-sidebar aside,
+  [data-astra-sidebar="true"] {
+    background: var(--astra-sidebar-gradient) !important;
+    color: #ffffff;
+  }
+
+  #main-sidebar .text-primary,
+  #main-sidebar .text-secondary,
+  #main-sidebar .text-tertiary,
+  [data-astra-sidebar="true"] .text-primary,
+  [data-astra-sidebar="true"] .text-secondary,
+  [data-astra-sidebar="true"] .text-tertiary {
+    color: #ffffff !important;
+  }
+
+  #main-sidebar .border-subtle,
+  [data-astra-sidebar="true"] .border-subtle {
+    border-color: color-mix(in srgb, white 12%, transparent) !important;
+  }
+
+  /* Lock left nav to viewport; only content panes scroll */
+  #main-sidebar {
+    position: sticky;
+    top: 0;
+    align-self: stretch;
+    height: 100%;
+    max-height: 100%;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  /* Lockup: light asset by default; dark-background reversed variant when theme is dark */
+  .astra-lockup-dark {
+    display: none;
+  }
+
+  :root:where([data-theme*="dark"]) .astra-lockup-light,
+  :host:where([data-theme*="dark"]) .astra-lockup-light,
+  [data-theme*="dark"] .astra-lockup-light {
+    display: none;
+  }
+
+  :root:where([data-theme*="dark"]) .astra-lockup-dark,
+  :host:where([data-theme*="dark"]) .astra-lockup-dark,
+  [data-theme*="dark"] .astra-lockup-dark {
+    display: inline-block;
+  }
+}

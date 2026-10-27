@@ -1,11 +1,11 @@
 {
-  "name": "Plane",
-  "short_name": "Plane",
-  "description": "Plane helps you plan your issues, cycles, and product modules.",
+  "name": "Astra Flow",
+  "short_name": "Astra Flow",
+  "description": "Astra Flow helps you plan work items, cycles, and product modules.",
   "start_url": ".",
   "display": "standalone",
-  "background_color": "#f9fafb",
-  "theme_color": "#ffffff",
+  "background_color": "#f4f6fb",
+  "theme_color": "#1677ff",
   "icons": [
     { "src": "/icons/icon-192x192.png", "sizes": "192x192", "type": "image/png" },
     { "src": "/icons/icon-512x512.png", "sizes": "512x512", "type": "image/png" }
