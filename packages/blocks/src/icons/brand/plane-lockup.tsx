@@ -13,7 +13,7 @@ export type PlaneLockupProps = React.ComponentPropsWithoutRef<"img"> & {
 };
 
 /**
- * Astra Flow wordmark lockup (replaces the Plane SVG lockup in this fork).
+ * Astra Flow wordmark lockup (replaces the Astra Flow SVG lockup in this fork).
  * Light-background asset by default; dark-background reversed variant via CSS.
  */
 export function PlaneLockup({

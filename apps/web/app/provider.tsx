@@ -6,7 +6,7 @@
 
 import { lazy, Suspense } from "react";
 import { SWRConfig } from "swr";
-// Plane Imports
+// Astra Flow Imports
 import { WEB_SWR_CONFIG } from "@plane/constants";
 import { TranslationProvider } from "@plane/i18n";
 import { PlaneToastProvider } from "@plane/blocks/toast";

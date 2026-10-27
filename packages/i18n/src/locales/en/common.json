@@ -838,7 +838,7 @@
   "pin": "Pin",
   "unpin": "Unpin",
   "workspace_dashboards": "Dashboards",
-  "pi_chat": "Plane AI",
+  "pi_chat": "Astra Flow AI",
   "in_app": "In-app",
   "forms": "Forms",
   "milestones": "Milestones",
@@ -874,5 +874,6 @@
       "short_description": "Export as json"
     }
   },
-  "labels_count": "{count, plural, one {# label} other {# labels}}"
+  "labels_count": "{count, plural, one {# label} other {# labels}}",
+  "legal_notices": "Legal notices"
 }

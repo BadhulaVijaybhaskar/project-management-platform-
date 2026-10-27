@@ -17,7 +17,7 @@ export function ProductUpdatesFooter() {
       <DialogInfo>
         <div className="flex items-center gap-2">
           <a
-            href="https://go.plane.so/p-docs"
+            href="https://astraconnect.io"
             target="_blank"
             className="text-13 text-secondary underline-offset-1 outline-none hover:text-primary hover:underline"
             rel="noreferrer"
@@ -28,7 +28,7 @@ export function ProductUpdatesFooter() {
             <circle cx={1} cy={1} r={1} />
           </svg>
           <a
-            href="https://go.plane.so/p-changelog"
+            href="https://astraconnect.io"
             target="_blank"
             className="text-13 text-secondary underline-offset-1 outline-none hover:text-primary hover:underline"
             rel="noreferrer"
@@ -39,7 +39,7 @@ export function ProductUpdatesFooter() {
             <circle cx={1} cy={1} r={1} />
           </svg>
           <a
-            href="mailto:support@plane.so"
+            href="mailto:support@astraconnect.io"
             target="_blank"
             className="text-13 text-secondary underline-offset-1 outline-none hover:text-primary hover:underline"
             rel="noreferrer"
@@ -50,7 +50,7 @@ export function ProductUpdatesFooter() {
             <circle cx={1} cy={1} r={1} />
           </svg>
           <a
-            href="https://forum.plane.so"
+            href="https://astraconnect.io/forum"
             target="_blank"
             className="text-13 text-secondary underline-offset-1 outline-none hover:text-primary hover:underline"
             rel="noreferrer"
@@ -65,7 +65,7 @@ export function ProductUpdatesFooter() {
         stretch="auto"
         nativeButton={false}
         render={
-          <a href="https://plane.so/pages" target="_blank" rel="noreferrer" aria-label={t("powered_by_plane_pages")} />
+          <a href="https://astraconnect.io" target="_blank" rel="noreferrer" aria-label={t("powered_by_plane_pages")} />
         }
         icon={<PlaneLogo className="h-4 w-auto text-primary" />}
         label={t("powered_by_plane_pages")}

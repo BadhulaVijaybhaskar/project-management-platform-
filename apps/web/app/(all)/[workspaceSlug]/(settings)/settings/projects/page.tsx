@@ -35,7 +35,7 @@ function ProjectSettingsPage() {
           variant="secondary"
           size="sm"
           stretch="auto"
-          render={<Link href="https://plane.so/" target="_blank" />}
+          render={<Link href="https://astraconnect.io" target="_blank" />}
         >
           Learn more about projects
         </ButtonElement>

@@ -14,7 +14,7 @@ export type PlaneLogoProps = React.ComponentPropsWithoutRef<"img"> & {
 
 /**
  * Astra Flow mark (square icon cropped from the official lockup).
- * Replaces the Plane SVG logo in this fork.
+ * Replaces the Astra Flow SVG logo in this fork.
  */
 export function PlaneLogo({
   width = "85",

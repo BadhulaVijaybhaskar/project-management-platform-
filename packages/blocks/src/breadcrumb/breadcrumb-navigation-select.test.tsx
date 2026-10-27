@@ -15,7 +15,7 @@ const SEARCH_PLACEHOLDER = "Search projects";
 
 function makeItems(overrides: Partial<BreadcrumbNavigationItem>[] = []): BreadcrumbNavigationItem[] {
   const base: BreadcrumbNavigationItem[] = [
-    { key: "plane", label: "Plane", onClick: vi.fn() },
+    { key: "plane", label: "Astra Flow", onClick: vi.fn() },
     { key: "web", label: "Web app", onClick: vi.fn() },
     { key: "api", label: "API", onClick: vi.fn() },
   ];
@@ -47,10 +47,10 @@ const popup = () => within(document.body);
  * The chevron half of the crumb. It is a plain button until `lazyMount` activates base-ui, and a
  * `combobox` after — and it is named by the property plus the selection, never by its own glyph.
  */
-const chevron = (name = `${PLACEHOLDER}, Plane`) =>
+const chevron = (name = `${PLACEHOLDER}, Astra Flow`) =>
   screen.queryByRole("combobox", { name }) ?? screen.getByRole("button", { name });
 /** The navigating half: its own control, named by the crumb's label. */
-const navigation = (name = "Plane") => screen.getByRole("button", { name });
+const navigation = (name = "Astra Flow") => screen.getByRole("button", { name });
 const search = () => popup().getByRole("combobox", { name: new RegExp(SEARCH_PLACEHOLDER, "i") });
 
 async function open(user: ReturnType<typeof userEvent.setup>) {
@@ -98,8 +98,8 @@ describe("BreadcrumbNavigationSelect", () => {
   });
 
   it("prefers the caller's label over the selected item's", () => {
-    renderCrumb({ label: "Plane (staging)" });
-    expect(navigation("Plane (staging)")).toBeDefined();
+    renderCrumb({ label: "Astra Flow (staging)" });
+    expect(navigation("Astra Flow (staging)")).toBeDefined();
   });
 
   it("renders nothing when no item matches and no label is given", () => {
@@ -124,10 +124,10 @@ describe("BreadcrumbNavigationSelect", () => {
     const user = userEvent.setup({ advanceTimers: vi.advanceTimersByTime });
     const { handleOnClick } = renderCrumb({ isLast: true });
     const trigger = chevron();
-    expect(trigger.textContent).toBe("Plane");
+    expect(trigger.textContent).toBe("Astra Flow");
     expect(trigger.getAttribute("aria-current")).toBe("page");
-    expect(screen.queryByRole("button", { name: "Plane" })).toBeNull();
-    await user.click(within(trigger).getByText("Plane"));
+    expect(screen.queryByRole("button", { name: "Astra Flow" })).toBeNull();
+    await user.click(within(trigger).getByText("Astra Flow"));
     await popup().findByRole("option", { name: "Web app" });
     expect(handleOnClick).not.toHaveBeenCalled();
   });
@@ -154,7 +154,7 @@ describe("BreadcrumbNavigationSelect", () => {
     expect(handleOnClick).not.toHaveBeenCalled();
     expect(onChange).not.toHaveBeenCalled();
     expect(popup().queryByRole("option")).toBeNull();
-    expect(screen.queryByRole("button", { name: "Project, Plane" })).toBeNull();
+    expect(screen.queryByRole("button", { name: "Project, Astra Flow" })).toBeNull();
   });
 
   it("calls the chosen item's onClick and onChange, not the current row's", async () => {
@@ -249,7 +249,7 @@ describe("BreadcrumbNavigationSelect", () => {
       navigationItems: makeItems([{ onClick: undefined, href: "/plane" }]),
     });
 
-    const link = screen.getByRole("link", { name: "Plane" });
+    const link = screen.getByRole("link", { name: "Astra Flow" });
     expect(link.getAttribute("href")).toBe("/plane");
   });
 
@@ -258,7 +258,7 @@ describe("BreadcrumbNavigationSelect", () => {
     const { navigationItems, onChange, handleOnClick } = renderCrumb();
 
     await open(user);
-    await user.click(await popup().findByRole("option", { name: "Plane" }));
+    await user.click(await popup().findByRole("option", { name: "Astra Flow" }));
 
     expect(handleOnClick).toHaveBeenCalledTimes(1);
     expect(navigationItems[0].onClick).not.toHaveBeenCalled();

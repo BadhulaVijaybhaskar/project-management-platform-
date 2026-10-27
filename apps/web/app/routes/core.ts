@@ -105,6 +105,12 @@ export const coreRoutes: RouteConfigEntry[] = [
           route(":workspaceSlug/stickies", "./(all)/[workspaceSlug]/(projects)/stickies/page.tsx"),
         ]),
 
+        // Legal notices (signed-in AGPL / third-party notices)
+        route(
+          ":workspaceSlug/legal-notices",
+          "./(all)/[workspaceSlug]/(projects)/legal-notices/page.tsx"
+        ),
+
         // Workspace Views
         layout("./(all)/[workspaceSlug]/(projects)/workspace-views/layout.tsx", [
           route(":workspaceSlug/workspace-views", "./(all)/[workspaceSlug]/(projects)/workspace-views/page.tsx"),

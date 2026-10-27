@@ -13,7 +13,7 @@ export const SITE_KEYWORDS =
 export const SITE_URL = "/";
 export const TWITTER_USER_NAME = "Astra Flow";
 
-// Publish / Space metadata (fork of Plane Publish)
+// Publish / Space metadata (fork of Astra Flow Publish)
 export const SPACE_SITE_NAME = "Astra Flow Publish";
 export const SPACE_SITE_TITLE = "Astra Flow Publish | Share boards publicly";
 export const SPACE_SITE_DESCRIPTION = "Astra Flow Publish makes boards and roadmaps public with one click.";

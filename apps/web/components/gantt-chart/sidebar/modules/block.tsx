@@ -5,7 +5,7 @@
  */
 
 import { observer } from "mobx-react";
-// Plane
+// Astra Flow
 import { Row } from "@plane/blocks/layout";
 // components
 import { cn } from "@plane/utils";

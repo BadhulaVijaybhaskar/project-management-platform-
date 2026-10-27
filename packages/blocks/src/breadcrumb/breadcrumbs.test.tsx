@@ -68,7 +68,7 @@ describe("Breadcrumbs collapsed overflow rows", () => {
     const user = userEvent.setup();
     render(
       <Breadcrumbs ariaLabel={TRAIL_LABEL} collapseBreakpoint={ALWAYS_COLLAPSED}>
-        <Breadcrumbs.Item component={plainCrumb("Plane")} />
+        <Breadcrumbs.Item component={plainCrumb("Astra Flow")} />
         <Breadcrumbs.Item component={<ProjectCrumb projectId="p-1" projectName="Web app" crumbLabel="Web app" />} />
         <Breadcrumbs.Item component={plainCrumb("Work items", true)} />
       </Breadcrumbs>
@@ -78,7 +78,7 @@ describe("Breadcrumbs collapsed overflow rows", () => {
     const rows = within(menu).getAllByRole("menuitem");
     // Without the `crumbLabel` read, the wrapper's row is blank: the element's props are ids, and
     // its markup only exists once React has rendered it.
-    expect(rows.map((row) => row.textContent)).toEqual(["Plane", "Web app"]);
+    expect(rows.map((row) => row.textContent)).toEqual(["Astra Flow", "Web app"]);
   });
 
   it("falls back to a wrapper's `aria-label` when no `crumbLabel` is given", async () => {
@@ -166,20 +166,20 @@ describe("Breadcrumbs collapsed overflow rows", () => {
     const user = userEvent.setup();
     render(
       <Breadcrumbs ariaLabel={TRAIL_LABEL} collapseBreakpoint={ALWAYS_COLLAPSED}>
-        <Breadcrumbs.Item component={plainCrumb("Plane")} />
+        <Breadcrumbs.Item component={plainCrumb("Astra Flow")} />
         <Breadcrumbs.Item component={plainCrumb("Work items", true)} />
       </Breadcrumbs>
     );
 
     const menu = await openOverflow(user);
-    expect(within(menu).getByRole("menuitem").textContent).toBe("Plane");
+    expect(within(menu).getByRole("menuitem").textContent).toBe("Astra Flow");
   });
 
   it("drops a row for a wrapper-rendered crumb that names nothing", async () => {
     const user = userEvent.setup();
     render(
       <Breadcrumbs ariaLabel={TRAIL_LABEL} collapseBreakpoint={ALWAYS_COLLAPSED}>
-        <Breadcrumbs.Item component={plainCrumb("Plane")} />
+        <Breadcrumbs.Item component={plainCrumb("Astra Flow")} />
         {/* `CommonProjectBreadcrumbs`'s shape: ids only, markup (or `null`) inside the wrapper. */}
         <ProjectCrumb projectId="p-1" projectName="Web app" />
         <Breadcrumbs.Item component={<ProjectCrumb projectId="p-2" projectName="Mobile" />} />
@@ -189,7 +189,7 @@ describe("Breadcrumbs collapsed overflow rows", () => {
 
     const menu = await openOverflow(user);
     const rows = within(menu).getAllByRole("menuitem");
-    expect(rows.map((row) => row.textContent)).toEqual(["Plane"]);
+    expect(rows.map((row) => row.textContent)).toEqual(["Astra Flow"]);
   });
 
   it("renders no overflow trigger when every collapsed crumb names nothing", () => {

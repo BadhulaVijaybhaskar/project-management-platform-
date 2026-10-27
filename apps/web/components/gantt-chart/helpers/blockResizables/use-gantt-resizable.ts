@@ -5,7 +5,7 @@
  */
 
 import { useRef, useState } from "react";
-// Plane
+// Astra Flow
 import { setToast } from "@plane/blocks/toast";
 import type { IBlockUpdateDependencyData, IGanttBlock } from "@plane/types";
 // hooks

@@ -20,7 +20,7 @@ import { useIssueFilter } from "@/hooks/store/use-issue-filter";
 import type { Route } from "./+types/layout";
 
 const DEFAULT_TITLE = "Astra Flow";
-const DEFAULT_DESCRIPTION = "Made with Plane, an AI-powered work management platform with publishing capabilities.";
+const DEFAULT_DESCRIPTION = "Made with Astra Flow, an AI-powered work management platform with publishing capabilities.";
 
 interface IssueMetadata {
   name?: string;

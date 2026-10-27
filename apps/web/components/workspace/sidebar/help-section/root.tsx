@@ -6,6 +6,7 @@
 
 import React, { useState } from "react";
 import { observer } from "mobx-react";
+import { useNavigate, useParams } from "react-router";
 import { HelpOutline, PagesOutline, UserOutline } from "@makeplane/propel/icons";
 import { DOCS_URL, FORUM_URL, SALES_EMAIL } from "@plane/constants";
 import { useTranslation } from "@plane/i18n";
@@ -23,6 +24,8 @@ export const HelpMenuRoot = observer(function HelpMenuRoot() {
   // store hooks
   const { t } = useTranslation();
   const { toggleShortcutsListModal } = usePowerK();
+  const { workspaceSlug } = useParams();
+  const navigate = useNavigate();
   // states
   const [isNeedHelpOpen, setIsNeedHelpOpen] = useState(false);
   const [isProductUpdatesModalOpen, setProductUpdatesModalOpen] = useState(false);
@@ -69,6 +72,13 @@ export const HelpMenuRoot = observer(function HelpMenuRoot() {
           <MenuItem label={t("keyboard_shortcuts")} onClick={() => toggleShortcutsListModal(true)} />
           <MenuItem label={t("whats_new")} onClick={() => setProductUpdatesModalOpen(true)} />
           <MenuItem label="Forum" onClick={() => window.open(FORUM_URL, "_blank", "noopener,noreferrer")} />
+          <MenuSeparator />
+          <MenuItem
+            label={t("legal_notices")}
+            onClick={() => {
+              if (workspaceSlug) navigate(`/${workspaceSlug}/legal-notices/`);
+            }}
+          />
         </MenuContent>
       </Menu>
     </>
