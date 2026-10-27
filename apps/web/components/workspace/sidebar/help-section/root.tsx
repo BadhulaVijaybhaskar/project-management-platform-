@@ -7,6 +7,7 @@
 import React, { useState } from "react";
 import { observer } from "mobx-react";
 import { HelpOutline, PagesOutline, UserOutline } from "@makeplane/propel/icons";
+import { DOCS_URL, FORUM_URL, SALES_EMAIL } from "@plane/constants";
 import { useTranslation } from "@plane/i18n";
 // ui
 import { Icon } from "@makeplane/propel/components/icon";
@@ -57,20 +58,17 @@ export const HelpMenuRoot = observer(function HelpMenuRoot() {
           <MenuItem
             icon={<Icon icon={PagesOutline} tint="secondary" />}
             label={t("documentation")}
-            onClick={() => window.open("https://go.plane.so/p-docs", "_blank")}
+            onClick={() => window.open(DOCS_URL, "_blank")}
           />
           <MenuItem
             icon={<Icon icon={UserOutline} tint="secondary" />}
             label={t("contact_sales")}
-            onClick={() => window.open("mailto:sales@plane.so", "_blank")}
+            onClick={() => window.open(SALES_EMAIL, "_blank")}
           />
           <MenuSeparator />
           <MenuItem label={t("keyboard_shortcuts")} onClick={() => toggleShortcutsListModal(true)} />
           <MenuItem label={t("whats_new")} onClick={() => setProductUpdatesModalOpen(true)} />
-          <MenuItem
-            label="Forum"
-            onClick={() => window.open("https://forum.plane.so", "_blank", "noopener,noreferrer")}
-          />
+          <MenuItem label="Forum" onClick={() => window.open(FORUM_URL, "_blank", "noopener,noreferrer")} />
         </MenuContent>
       </Menu>
     </>

@@ -19,7 +19,7 @@ import { InboxOutline } from "@makeplane/propel/icons";
 import useSWR from "swr";
 import { useWorkspaceNotifications } from "@/hooks/store/notifications";
 // local imports
-import { StarUsOnGitHubLink } from "@/app/(all)/[workspaceSlug]/(projects)/star-us-link";
+import { AstraFlowMark } from "@/components/brand/astra-flow-mark";
 
 export const TopNavigationRoot = observer(function TopNavigationRoot() {
   // router
@@ -50,8 +50,9 @@ export const TopNavigationRoot = observer(function TopNavigationRoot() {
         "px-2": !showLabel,
       })}
     >
-      {/* Workspace Menu */}
-      <div className="flex-1 shrink-0">
+      {/* Product brand + workspace menu */}
+      <div className="flex flex-1 shrink-0 items-center gap-2">
+        <AstraFlowMark className="h-7 w-7 shrink-0" />
         <WorkspaceMenuRoot variant="top-navigation" />
       </div>
       {/* Power K Search */}
@@ -78,7 +79,6 @@ export const TopNavigationRoot = observer(function TopNavigationRoot() {
           />
         </Tooltip>
         <HelpMenuRoot />
-        <StarUsOnGitHubLink />
         <div className="flex size-8 items-center justify-center rounded-md hover:bg-layer-1-hover">
           <UserMenuRoot />
         </div>

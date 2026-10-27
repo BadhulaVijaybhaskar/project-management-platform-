@@ -17,6 +17,7 @@ import { CustomizeNavigationDialog } from "@/components/navigation/customize-nav
 import { useAppTheme } from "@/hooks/store/use-app-theme";
 import useSize from "@/hooks/use-window-size";
 // plane web components
+import { AstraFlowMark } from "@/components/brand/astra-flow-mark";
 import { WorkspaceEditionBadge } from "@/components/workspace/edition-badge";
 import { AppSidebarToggleButton } from "./sidebar-toggle-button";
 import { IconButton } from "@makeplane/propel/components/icon-button";
@@ -56,6 +57,11 @@ export const SidebarWrapper = observer(function SidebarWrapper(props: TSidebarWr
       <CustomizeNavigationDialog isOpen={isCustomizeNavDialogOpen} onClose={() => setIsCustomizeNavDialogOpen(false)} />
       <div ref={ref} className="flex h-full w-full animate-fade-in flex-col">
         <div className="flex flex-col gap-3 px-3">
+          {/* Product brand — mark on navy sidebar */}
+          <div className="flex items-center gap-2 px-2 pt-0.5">
+            <AstraFlowMark className="h-7 w-7 shrink-0" />
+            <span className="truncate text-13 font-semibold tracking-tight text-primary">Astra Flow</span>
+          </div>
           {/* Workspace switcher and settings */}
 
           <div className="flex items-center justify-between gap-2 px-2">

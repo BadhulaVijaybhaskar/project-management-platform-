@@ -23,11 +23,14 @@ export const LIVE_URL = encodeURI(`${LIVE_BASE_URL}${LIVE_BASE_PATH}`);
 export const WEB_BASE_URL = process.env.VITE_WEB_BASE_URL || "";
 export const WEB_BASE_PATH = process.env.VITE_WEB_BASE_PATH || "";
 export const WEB_URL = encodeURI(`${WEB_BASE_URL}${WEB_BASE_PATH}`);
-// plane website url
-export const WEBSITE_URL = process.env.VITE_WEBSITE_URL || "https://plane.so";
+// Astra Flow / AstraConnect placeholders (replacing plane.so user-facing links)
+export const WEBSITE_URL = process.env.VITE_WEBSITE_URL || "https://astraconnect.io";
 // support email
-export const SUPPORT_EMAIL = process.env.VITE_SUPPORT_EMAIL || "support@plane.so";
-// marketing links
-export const MARKETING_PRICING_PAGE_LINK = "https://plane.so/pricing";
-export const MARKETING_CONTACT_US_PAGE_LINK = "https://plane.so/contact";
-export const MARKETING_PLANE_ONE_PAGE_LINK = "https://plane.so/one";
+export const SUPPORT_EMAIL = process.env.VITE_SUPPORT_EMAIL || "support@astraconnect.io";
+// marketing / help placeholders
+export const MARKETING_PRICING_PAGE_LINK = "https://astraconnect.io/pricing";
+export const MARKETING_CONTACT_US_PAGE_LINK = "https://astraconnect.io/contact";
+export const MARKETING_PLANE_ONE_PAGE_LINK = "https://astraconnect.io";
+export const DOCS_URL = "https://astraconnect.io/docs";
+export const FORUM_URL = "https://astraconnect.io/forum";
+export const SALES_EMAIL = "mailto:sales@astraconnect.io";
